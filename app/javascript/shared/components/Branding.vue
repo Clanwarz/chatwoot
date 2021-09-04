@@ -1,18 +1,12 @@
 <template>
-  <div v-if="globalConfig.brandName" class="branding">
-    <a
-      :href="brandRedirectURL"
-      rel="noreferrer noopener nofollow"
-      target="_blank"
-      class="branding--link w-full justify-center"
-    >
-      <img :alt="globalConfig.brandName" :src="globalConfig.logoThumbnail" />
-      <span>
-        {{ useInstallationName($t('POWERED_BY'), globalConfig.brandName) }}
-      </span>
-    </a>
-  </div>
-  <div v-else class="brand--alternative" />
+  <a
+    class="branding branding--link" href="https://www.clanwarz.com/?utm_source=chat_widget" target="_blank">
+    <img alt="Clanwarz Inc." :src="/brand-assets/cw_icon.png" />
+    <!-- <i class="fa fa-book"></i> -->
+    <span>
+      Pwered by Clanwarz Inc.
+    </span>
+  </a>
 </template>
 
 <script>
