@@ -1,7 +1,7 @@
 <template>
   <a
     class="branding branding--link" href="https://www.clanwarz.com/?utm_source=chat_widget" target="_blank">
-    <img alt="Clanwarz Inc." :src="/brand-assets/cw_icon.png" />
+    <img alt="Clanwarz Inc." :src="/brand-assets/clanz_icon.png" />
     <!-- <i class="fa fa-book"></i> -->
     <span>
       Pwered by Clanwarz Inc.
