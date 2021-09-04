@@ -4,7 +4,7 @@
     <img alt="Clanwarz Inc." src="brand-assets/clanz_icon.png" />
     <!-- <i class="fa fa-book"></i> -->
     <span>
-      Pwered by Clanwarz Inc.
+      Powered by Clanwarz Inc.
     </span>
   </a>
 </template>
