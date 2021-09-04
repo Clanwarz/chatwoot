@@ -36,7 +36,7 @@
             </span>
             <span class="phone" title="follow us on LinkedIn">
                 <a href="callto://+16182073806" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-phone-rotary"></i>
+                    <i class="fas fa-phone"></i>
                 </a>
             </span> -->
             <span class="facebook" title="like our page on Facebook">
