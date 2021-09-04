@@ -88,6 +88,7 @@ export default {
 
     &.ion-android-close {
       font-size: $font-size-big;
+      color: #fff;
     }
   }
 
