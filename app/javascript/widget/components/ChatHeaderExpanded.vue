@@ -21,7 +21,7 @@
                     <i class="fa fa-caret-right"></i>
                 </a>
             </span>
-            <span class="email">
+            <span class="email" title="reach us on email">
                 <a href="mailto:info@clanwarz.com" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
@@ -51,9 +51,9 @@
                     <i class="fab fa-instagram"></i>
                 </a>
             </span> -->
-            <span class="phone" title="follow us on LinkedIn">
+            <span class="phone" title="This link will initiate Skype to call the office number">
                 <a href="callto://+16182073806" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone-alt"></i>
                 </a>
             </span>
         </span>
