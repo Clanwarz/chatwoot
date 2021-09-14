@@ -7,7 +7,7 @@
 
 .sidebar {
   @include border-normal-right;
-  @include background-white;
+  background: var(--color-background-dark1);
   @include full-height;
   @include margin(0);
   @include space-between-column;
