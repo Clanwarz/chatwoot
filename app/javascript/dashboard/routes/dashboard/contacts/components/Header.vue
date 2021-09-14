@@ -121,7 +121,7 @@ export default {
     width: 100%;
     padding-left: var(--space-large);
     padding-right: 6rem;
-    border-color: var(--s-100);
+    border-color: var(--color-border-dark2);
   }
 
   .button {

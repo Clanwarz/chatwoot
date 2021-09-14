@@ -1,12 +1,13 @@
 .report-card {
   @include padding($space-normal $space-small $space-normal $space-two);
   @include margin($zero);
+  background: var(--color-background-dark2);
   cursor: pointer;
   @include custom-border-top(3px, transparent);
 
   &.active {
     @include custom-border-top(3px, $color-woot);
-    @include background-white;
+    background: var(--color-background-dark2);
     .heading,
     .metric {
       color: $color-woot;
@@ -35,8 +36,8 @@
 
 .report-bar {
   @include margin(-1px $zero);
-  @include background-white;
-  @include border-light;
+  background: var(--color-background-dark1);
+  border: 1px solid var(--color-border-dark2);
   @include padding($space-small $space-medium);
 
   .chart-container {
