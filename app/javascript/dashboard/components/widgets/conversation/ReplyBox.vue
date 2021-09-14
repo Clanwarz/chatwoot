@@ -467,10 +467,10 @@ export default {
 
 .reply-box {
   border-top: 1px solid var(--color-border);
-  background: white;
+  background: var(--color-background-dark1);
 
   &.is-private {
-    background: var(--y-50);
+    background: var(--color-background-dark1);
   }
 }
 .send-button {
