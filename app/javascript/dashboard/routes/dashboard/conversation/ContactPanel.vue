@@ -389,7 +389,7 @@ export default {
 @import '~dashboard/assets/scss/variables';
 
 .contact--panel {
-  background: white;
+  background: var(--color-background-dark1);
   border-left: 1px solid var(--color-border);
   font-size: $font-size-small;
   overflow-y: auto;

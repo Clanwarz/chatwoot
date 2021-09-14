@@ -23,11 +23,11 @@ export default {
   &::v-deep .label {
     cursor: pointer;
     background: transparent;
-    border-color: var(--s-600);
+    border-color: var(--b-900);
     margin: 0;
 
     &:hover {
-      background: var(--s-50);
+      background: var(--b-900);
     }
   }
 }

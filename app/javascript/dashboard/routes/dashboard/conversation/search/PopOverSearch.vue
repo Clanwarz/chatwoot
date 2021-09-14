@@ -168,6 +168,7 @@ export default {
   font-weight: var(--font-weight-normal);
   text-align: left;
   line-height: var(--font-size-large);
+  background: var(--color-background-dark1);
 }
 
 .search--icon {
@@ -199,6 +200,7 @@ input::placeholder {
   list-style-type: none;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-normal);
+  background:  var(--color-background-dark);
 }
 
 .result-view {

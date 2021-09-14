@@ -127,7 +127,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  background: var(--b-50);
+  background: var(--color-background-dark1);
 }
 
 .button-group {
@@ -144,16 +144,16 @@ export default {
     z-index: 1;
 
     &.is-active {
-      background: white;
+      background: var(--color-background-dark1);
     }
   }
 
   .button--reply {
     border-radius: 0;
-    border-right: 1px solid var(--color-border);
+    border-right: 1px solid #3a3a3a;
 
     &:hover {
-      border-right: 1px solid var(--color-border);
+      border-right: 1px solid #3a3a3a;
     }
   }
 
@@ -162,7 +162,7 @@ export default {
 
     &.is-active {
       border-right: 1px solid var(--color-border);
-      background: var(--y-50);
+      background: var(--color-background-dark1);
     }
 
     &:hover,
