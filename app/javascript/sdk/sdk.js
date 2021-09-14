@@ -68,7 +68,8 @@ export const SDK_CSS = `.woot-widget-holder {
 }
 
 .woot-widget-bubble.woot-elements--right {
-  right: 20px;
+  right: 10px;
+  margin-bottom: 25px;
 }
 
 .woot-widget-bubble:hover {
