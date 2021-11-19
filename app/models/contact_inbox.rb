@@ -32,7 +32,7 @@ class ContactInbox < ApplicationRecord
   belongs_to :contact
   belongs_to :inbox
 
-  has_many :conversations, dependent: :destroy
+  has_many :conversations, dependent: :destroy_async
 
   def webhook_data
     {
@@ -61,7 +61,7 @@ class ContactInbox < ApplicationRecord
   end
 
   def validate_email_source_id
-    errors.add(:source_id, "invalid source id for Email inbox. valid Regex #{Device.email_regexp}") unless Devise.email_regexp.match?(source_id)
+    errors.add(:source_id, "invalid source id for Email inbox. valid Regex #{Devise.email_regexp}") unless Devise.email_regexp.match?(source_id)
   end
 
   def valid_source_id_format?

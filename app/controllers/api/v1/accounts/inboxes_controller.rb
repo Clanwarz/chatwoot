@@ -1,4 +1,5 @@
 class Api::V1::Accounts::InboxesController < Api::V1::Accounts::BaseController
+  include Api::V1::InboxesHelper
   before_action :fetch_inbox, except: [:index, :create]
   before_action :fetch_agent_bot, only: [:set_agent_bot]
   # we are already handling the authorization in fetch inbox
@@ -41,9 +42,14 @@ class Api::V1::Accounts::InboxesController < Api::V1::Accounts::BaseController
   def update
     @inbox.update(permitted_params.except(:channel))
     @inbox.update_working_hours(params.permit(working_hours: Inbox::OFFISABLE_ATTRS)[:working_hours]) if params[:working_hours]
-
     channel_attributes = get_channel_attributes(@inbox.channel_type)
-    @inbox.channel.update!(permitted_params(channel_attributes)[:channel]) if permitted_params(channel_attributes)[:channel].present?
+
+    # Inbox update doesn't necessarily need channel attributes
+    return if permitted_params(channel_attributes)[:channel].blank?
+
+    validate_email_channel(channel_attributes) if @inbox.inbox_type == 'Email'
+
+    @inbox.channel.update!(permitted_params(channel_attributes)[:channel])
     update_channel_feature_flags
   end
 
@@ -96,6 +102,8 @@ class Api::V1::Accounts::InboxesController < Api::V1::Accounts::BaseController
       Current.account.line_channels.create!(permitted_params(Channel::Line::EDITABLE_ATTRS)[:channel].except(:type))
     when 'telegram'
       Current.account.telegram_channels.create!(permitted_params(Channel::Telegram::EDITABLE_ATTRS)[:channel].except(:type))
+    when 'whatsapp'
+      Current.account.whatsapp_channels.create!(permitted_params(Channel::Whatsapp::EDITABLE_ATTRS)[:channel].except(:type))
     end
   end
 
