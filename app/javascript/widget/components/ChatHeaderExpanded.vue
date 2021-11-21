@@ -57,7 +57,7 @@
                 </a>
             </span>
         </span>
-        <span class="reply-eta">Welcome to our communication channel for all sales inquiries and billing related matters. For technical support, kindly open a ticket from your account.</span>
+        <span class="reply-eta">Welcome to our communication channel for all sales inquiries and technical support matters. For technical support, kindly open a ticket from your account before engaging this chat.</span>
   </header>
 </template>
 

@@ -59,7 +59,22 @@
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
     <style type="text/css">
-      .modal-container textarea, .modal-container [type=text], .modal-container [type=url], .search-wrap .contact-search, .edit-contact--form span.input-group-label, .settings--section [type=color], .settings--section [type=date], .settings--section [type=datetime-local], .settings--section [type=datetime], .settings--section [type=email], .settings--section [type=month], .settings--section [type=number], .settings--section [type=password], .settings--section [type=search], .settings--section [type=tel], .settings--section [type=text], .settings--section [type=time], .settings--section [type=url], .settings--section [type=week], .settings--section textarea, select, .wizard-body [type=color], .wizard-body [type=date], .wizard-body [type=datetime-local], .wizard-body [type=datetime], .wizard-body [type=email], .wizard-body [type=month], .wizard-body [type=number], .wizard-body [type=password], .wizard-body [type=search], .wizard-body [type=tel], .wizard-body [type=text], .wizard-body [type=time], .wizard-body [type=url], .wizard-body [type=week], .wizard-body textarea  {
+      .contact--panel, .conversation--attribute {
+        background-color: var(--color-background-dark1) !important;
+      }
+      .view-box, .card {
+          background: var(--color-background-dark) !important;
+      }
+      .card.note-wrap {
+          background: var(--color-background-dark1) !important;
+      }
+      .note__content {
+          color: var(--b-300) !important;
+      }
+      .has-context-menu {
+          background: transparent !important;
+      }
+      .modal-container textarea, .modal-container [type=text], .modal-container [type=url], .search-wrap .contact-search, .edit-contact--form span.input-group-label, .settings--section [type=color], .settings--section [type=date], .settings--section [type=datetime-local], .settings--section [type=datetime], .settings--section [type=email], .settings--section [type=month], .settings--section [type=number], .settings--section [type=password], .settings--section [type=search], .settings--section [type=tel], .settings--section [type=text], .settings--section [type=time], .settings--section [type=url], .settings--section [type=week], .settings--section textarea, select, .wizard-body [type=color], .wizard-body [type=date], .wizard-body [type=datetime-local], .wizard-body [type=datetime], .wizard-body [type=email], .wizard-body [type=month], .wizard-body [type=number], .wizard-body [type=password], .wizard-body [type=search], .wizard-body [type=tel], .wizard-body [type=text], .wizard-body [type=time], .wizard-body [type=url], .wizard-body [type=week], .wizard-body textarea, .input-group .input-group-field[data-v-13645dda] input  {
         background: transparent !important;
       }
       .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-body-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-expand-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-expand-tr td.ve-table-body-td, .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-expand-tr td.ve-table-expand-td {
@@ -84,13 +99,28 @@
         background: #1f2124 !important;
       }
 
+      .title-wrap {
+        margin-bottom: 4px !important;
+      }
+      .custom-attribute--row div p, .value--view p.value {
+        margin-bottom: 0;
+      }
+      .value--view.is-editable:hover .value {
+        background: var(--color-background-dark2) !important;
+      }
+
       .multiselect__content-wrapper {
           border-color: var(--color-background-dark2) !important;
+      }
+      .multiselect-wrap--medium .multiselect, .multiselect-wrap--medium .multiselect__input, .multiselect-wrap--medium .multiselect__tags {
+          background: var(--color-background-dark1) !important;
+          border-radius: 3px !important;
       }
 
       .ProseMirror-menuitem {
           background: var(--b-900);
           border-radius: 3px;
+          transition: .2s ease all;
       }
       .ProseMirror-menuitem:hover {
           background: var(--b-800);
@@ -113,6 +143,17 @@
       }
       .ve-pagination .ve-pagination-goto .ve-pagination-goto-input:hover {
           border-color: var(--color-woot) !important;
+      }
+
+      .button.smooth {
+          background-color: var(--color-background-dark2) !important;
+          color: var(--w-50) !important;
+      }
+      .button.smooth:hover {
+          background: var(--s-800) !important;
+      }
+      .bubble.is-from-bot {
+          background: var(--g-900) !important;
       }
     </style>
   </head>
