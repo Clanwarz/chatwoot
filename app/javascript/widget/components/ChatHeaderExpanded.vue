@@ -267,10 +267,12 @@ $logo-size: 56px;
     height: 0.7rem;
     width: 0.65rem;
     margin-top: 8px;
-    margin-left: 7px;
-    animation: pulse 2s infinite;
+    margin-left: 10px;
 }
-@keyframes pulse {
+.status-view--badge.bg-green-500 {
+    animation: pulse-g 2s infinite;
+}
+@keyframes pulse-g {
   0% {
     transform: scale(0.85);
     box-shadow: 0 0 0 0 #08bb13;
@@ -282,10 +284,24 @@ $logo-size: 56px;
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 transparent;
-//   .logo {
-//     width: $logo-size;
-//     height: $logo-size;
-//     border-radius: $logo-size;
+  }
+}
+.status-view--badge.bg-orange-500 {
+  background-color: #ffbc00;
+  animation: pulse-o 2s infinite;
+}
+@keyframes pulse-o {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 #a0894f;
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 span.availability-status {
@@ -295,8 +311,5 @@ span.availability-status {
     position: relative;
     color: #fff;
     font-size: 12px;
-}
-.status-view--badge.bg-orange-500 {
-  background-color: #ffbc00;
 }
 </style>
