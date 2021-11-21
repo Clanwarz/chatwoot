@@ -183,7 +183,7 @@ export const SDK_CSS = `.woot-widget-holder {
 /* --==--==--==--== Customizations ==--==--==--==-- */
 
 .woot-widget-holder {
-
+    bottom: 125px !important;
 }
 
 
