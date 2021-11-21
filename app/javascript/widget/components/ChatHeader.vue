@@ -29,16 +29,6 @@
                   	<i class="fa fa-caret-right"></i>
                 </a>
             </span>
-            <!-- <span class="email" title="contact us via email">
-                <a href="mailto:info@clanwarz.com" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </span>
-            <span class="phone" title="This link will initiate Skype to call the office number">
-                <a href="callto://+16182073806" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </span> -->
             <span class="facebook" title="like our page on Facebook">
                 <a href="https://fb.me/iClanwarz" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>

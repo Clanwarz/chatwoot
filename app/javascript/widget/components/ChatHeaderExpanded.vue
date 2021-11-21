@@ -2,27 +2,23 @@
   <header class="header-expanded py-8 px-6 relative box-border w-full">
     <div class="">
       <div class="title-logo">
-      <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
-      <span class="header-elements">
-        <div style="display: inline-flex;">
-          <h2 class="title" v-html="introHeading"></h2>
-          <div
-            :class="
-              `status-view--badge rounded-full leading-4 ${
-                isOnline ? 'bg-green-500' : 'bg-orange-500'
-              }`
-            "
-            :title="
-              `${
-                isOnline ? 'Online' : 'Currenlty Away'
-              }`
-            "
-          />
-        </div>
-          <span class="reply-eta" v-html="introBody"></span>
+        <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+        <span class="header-elements">
+          <div style="display: inline-flex;">
+            <h2 class="title" v-html="introHeading"></h2>
+            <div
+              :class="
+                `status-view--badge rounded-full leading-4 ${
+                  isOnline ? 'bg-green-500' : 'bg-orange-500'
+                }`
+              "
+            />
+          </div>
+            <span class="reply-eta" v-html="introBody"></span>
 
-      </span>
-      <header-actions :show-popout-button="showPopoutButton" />
+        </span>
+        <header-actions :show-popout-button="showPopoutButton" />
+      </div>
     </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements header-elements-2">
@@ -38,11 +34,6 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </span>
-            <!-- <span class="whatsapp" title="send us on WhatsApp">
-                <a href="https://wa.me/19712514959" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </span> -->
             <span class="facebook" title="like our page on Facebook">
                 <a href="https://fb.me/iClanwarz" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
@@ -58,11 +49,6 @@
                     <i class="fab fa-linkedin"></i>
                 </a>
             </span>
-            <!-- <span class="instagram" title="follow us on Instagram">
-                <a href="https://instagram.com/WevrLabs" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </span> -->
             <span class="phone" title="This link will initiate Skype to call the office number">
                 <a href="callto://+16182073806" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-phone-alt"></i>
