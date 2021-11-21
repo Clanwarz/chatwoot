@@ -68,6 +68,7 @@ import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
 import configMixin from 'widget/mixins/configMixin';
 import availabilityMixin from 'widget/mixins/availability';
+
 export default {
   name: 'ChatHeaderExpanded',
   components: {
