@@ -186,6 +186,7 @@ export const SDK_CSS = `.woot-widget-holder {
     top: 45px !important;
 }
 
+
 .woot-widget-bubble {
     box-shadow: 0 0 15px #4693ff !important;
     transition: .3s all ease !important;
