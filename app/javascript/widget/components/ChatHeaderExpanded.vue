@@ -84,7 +84,7 @@ export default {
   components: {
     HeaderActions,
   },
-  mixins: [configMixin, teamAvailabilityMixin],
+  mixins: [configMixin, availabilityMixin, teamAvailabilityMixin],
   props: {
     avatarUrl: {
       type: String,
@@ -104,7 +104,7 @@ export default {
     },
     availableAgents: {
       type: Array,
-      default: () => [],
+      default: () => {},
     },
   },
   computed: {
