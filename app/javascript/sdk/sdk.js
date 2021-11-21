@@ -178,4 +178,33 @@ export const SDK_CSS = `.woot-widget-holder {
     width: 400px !important;
  }
 }
+
+
+/* --==--==--==--== Customizations ==--==--==--==-- */
+
+.woot-widget-holder {
+    top: 45px !important;
+}
+
+.woot-widget-bubble {
+    box-shadow: 0 0 15px #4693ff !important;
+    transition: .3s all ease !important;
+    animation: pulsation 2s infinite;
+}
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px #4693ff;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent;
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
 `;

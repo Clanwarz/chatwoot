@@ -9,7 +9,7 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
-      :style="{ background: widgetColor }"
+      style="background: linear-gradient(0, #141518, #475362 88%, #5a83bd)"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
@@ -109,10 +109,10 @@ export default {
       type: Boolean,
       default: false,
     },
-    widgetColor: {  
-      type: String, 
+    widgetColor: {
+      type: String,
       default: '',
-    },  
+    },
     isCampaignViewClicked: {
       type: Boolean,
       default: false,
@@ -164,7 +164,7 @@ export default {
     fileUploadSizeLimit() {
       return MAXIMUM_FILE_UPLOAD_SIZE;
     },
-    
+
     isHeaderCollapsed() {
       if (
         !this.hasIntroText ||
@@ -215,8 +215,12 @@ export default {
     transition: max-height 300ms;
     z-index: 99;
     @include shadow-large;
-    border-radius: 0; 
-    background-image: linear-gradient(125deg,rgba(255, 255, 255, 0.25) -20%,rgba(0,0,0,0.45)) !important; 
+    border-radius: 0;
+    background-image: linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.25) -20%,
+      rgba(0, 0, 0, 0.45)
+    ) !important;
     overflow: hidden;
     &.expanded {
       max-height: 100%;
