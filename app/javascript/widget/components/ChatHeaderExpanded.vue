@@ -2,23 +2,27 @@
   <header class="header-expanded py-8 px-6 relative box-border w-full">
     <div class="">
       <div class="title-logo">
-        <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
-        <span class="header-elements">
-          <div style="display: inline-flex;">
-            <h2 class="title" v-html="introHeading"></h2>
-            <div
-              :class="
-                `status-view--badge rounded-full leading-4 ${
-                  isOnline ? 'bg-green-500' : 'bg-orange-500'
-                }`
-              "
-            />
-          </div>
-            <span class="reply-eta" v-html="introBody"></span>
+      <img v-if="avatarUrl" class="logo" :src="avatarUrl" />
+      <span class="header-elements">
+        <div style="display: inline-flex;">
+          <h2 class="title" v-html="introHeading"></h2>
+          <div
+            :class="
+              `status-view--badge rounded-full leading-4 ${
+                isOnline ? 'bg-green-500' : 'bg-orange-500'
+              }`
+            "
+            :title="
+              `${
+                isOnline ? 'Online' : 'Currenlty Away'
+              }`
+            "
+          />
+        </div>
+          <span class="reply-eta" v-html="introBody"></span>
 
-        </span>
-        <header-actions :show-popout-button="showPopoutButton" />
-      </div>
+      </span>
+      <header-actions :show-popout-button="showPopoutButton" />
     </div>
     <span class="close close-button" @click="closeWindow"></span>
     <span class="header-elements header-elements-2">
@@ -56,7 +60,6 @@
             </span>
         </span>
         <span class="reply-eta">Welcome to our communication channel for all sales inquiries and technical support matters. For technical support, kindly open a ticket from your account before engaging this chat.</span>
-    </span>
   </header>
 </template>
 
@@ -65,13 +68,12 @@ import { mapGetters } from 'vuex';
 import HeaderActions from './HeaderActions';
 import configMixin from 'widget/mixins/configMixin';
 import availabilityMixin from 'widget/mixins/availability';
-import teamAvailabilityMixin from 'widget/mixins/teamAvailabilityMixin';
 export default {
   name: 'ChatHeaderExpanded',
   components: {
     HeaderActions,
   },
-  mixins: [configMixin, availabilityMixin, teamAvailabilityMixin],
+  mixins: [configMixin, availabilityMixin],
   props: {
     avatarUrl: {
       type: String,
@@ -91,7 +93,7 @@ export default {
     },
     availableAgents: {
       type: Array,
-      default: () => {},
+      default: () => [],
     },
   },
   computed: {
