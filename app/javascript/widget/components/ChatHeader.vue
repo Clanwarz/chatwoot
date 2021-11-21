@@ -191,7 +191,7 @@ export default {
         }
         
        span a {
-          background: rgba(0, 0, 0, 0.25);
+          background: linear-gradient(0,#141518,#475362 88%,#5a83bd);
           display: inline-block;
           border-radius: 50%;
           padding: 8px 9px;

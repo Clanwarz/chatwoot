@@ -9,7 +9,8 @@
     <div
       class="header-wrap bg-white"
       :class="{ expanded: !isHeaderCollapsed, collapsed: isHeaderCollapsed }"
-      style="background: linear-gradient(0, #141518, #475362 88%, #5a83bd)"
+      style="
+        background: linear-gradient(0,#141518,#475362 88%,#5a83bd) !important"
     >
       <transition
         enter-active-class="transition-all delay-200 duration-300 ease"
