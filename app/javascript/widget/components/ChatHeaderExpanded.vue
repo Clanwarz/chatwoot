@@ -118,7 +118,9 @@ export default {
 @import '~widget/assets/scss/variables.scss';
 @import '~widget/assets/scss/mixins.scss';
 @import url('https://chat.clanwarz.com/fontawesome-all.min.css');
+
 $logo-size: 56px;
+
 .header-expanded {
   padding: 2.1rem 1.4rem 1.4rem;
   width: 100%;
